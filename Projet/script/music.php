@@ -63,5 +63,41 @@ function AddMedia($MediaType, $Name, $Path)
 	$id = $pdo->LastInsertID();
 	return $id;
     }
+ 
+/**
+ * Updates a media from "Medias"
+ * @param integer $id - the id of the media
+ * @param enum $MediaType - an image or a song
+ * @param string $Name - the name of the media
+ * @param string $Path - the path of the media
+ * @return integer $id - the id of the modified Media
+ */
+ function UpdateMedia($id, $MediaType, $Name, $Path)
+    {
+        $pdo = DBConnect();
+        $query = 'Update Medias 
+                SET MediaType=:MediaType, Name=:Name, Path=:Path
+                WHERE idMedia=:id';				 
+        $st = $pdo->prepare($query);
+        $st->execute(array(
+            'id' => $id,
+            'MediaPath' => $MediaPath,
+            'Name' => $Name,
+            'Path' => $Path));
+	$id = $pdo->LastInsertID();
+	return $id;
+    }   
     
-    
+ /**
+  * Deletes a media from "Medias"
+  * @param integer $id - the id of the media
+  */   
+ function DeleteMedia($id)
+    {
+        $pdo = DBConnect();
+	$query = 'DELETE FROM Medias
+            WHERE idPMedia=:id';
+	$st = $pdo->prepare($query);
+	$st->execute(array(
+            'id' => $id));
+    }
