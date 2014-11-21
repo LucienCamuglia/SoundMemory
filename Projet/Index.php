@@ -29,7 +29,7 @@ Version : 1.0
                 </div>
             </section>
             <aside>
-                <form class="form-inline" method="post">
+                <form class="form-inline" method="post" action="script/connection.php">
                     <div class="form-group">
                         <div class="input-group">
                             <span class="glyphicon glyphicon-user"></span>
