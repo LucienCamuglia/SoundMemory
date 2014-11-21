@@ -1,0 +1,33 @@
+/*
+Module : M152
+Project : 18 - SoundMemory
+Page    : index.php
+InfoPage: Page d'accueil du site, page du jeux.
+Autor   : Camuglia Lucien, Perez Ivan
+Date    : 21.11.2014
+Version : 1.0 
+*/
+
+body{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.navbar-fixed-top{
+    background-color: #999;
+    text-align: center;
+}
+
+#cartes{
+    width: 400px;
+    height: 450px;
+    background-color: currentColor;
+    margin: auto;
+}
+.navbar-fixed-bottom{
+    padding-bottom: 15px;
+}
+
+aside{
+    text-align: center;
+    padding-top: 15px;
+}
