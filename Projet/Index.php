@@ -8,6 +8,17 @@ Autor   : Camuglia Lucien, Perez Ivan
 Date    : 21.11.2014
 Version : 1.0 
 -->
+<?php
+include './script/functions.php';
+include './script/include.php';
+if (isset($_POST['login'])) {
+    connexion();
+}
+if (isset($_POST['audio'])){
+    upload();
+}
+
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -25,29 +36,16 @@ Version : 1.0
             </header>
             <section>
                 <div id="cartes">
-                   Section
+                    Section
                 </div>
             </section>
-            <aside>
-                <form class="form-inline" method="post" action="script/connection.php">
-                    <div class="form-group">
-                        <div class="input-group">
-                            <span class="glyphicon glyphicon-user"></span>
-                            <input type="text" name="username" placeholder="Username" required/>
-                        </div>
-
-                        <div class="input-group">
-                            <span class="glyphicon glyphicon-lock"></span>
-                            <input type="password" name="password" placeholder="Password" required/>
-                        </div>
-
-                        <div class="input-group">                            
-                            <span class="glyphicon glyphicon-log-in"></span>
-                            <input type="submit" name="login" value="Administrator login only"/>
-                        </div>
-                    </div>
-                    </form>
-            </aside>
+            <?php
+            if ((isset($_SESSION["login"])) && ($_SESSION['login'])) {
+                formUpload();
+            } else {
+                formLogin();
+            }
+            ?>
             <footer class="navbar-fixed-bottom">
                 © Camuglia Lucien & Perez Ivan - M152 - 2014    
             </footer>
