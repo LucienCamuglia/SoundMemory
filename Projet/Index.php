@@ -18,6 +18,8 @@ if (isset($_POST['audio'])){
     upload();
 }
 
+$nbCarte = 6;
+
 ?>
 <html>
     <head>
@@ -26,6 +28,7 @@ if (isset($_POST['audio'])){
         <link rel="stylesheet" href="./CSS/bootstrap.min.css" type="text/css"/>
         <link rel="stylesheet" href="./CSS/style.css" type="text/css"/>
         <script src="./JS/jquery.js" ></script>
+        <script src="./JS/script.js" ></script>
     </head>
     <body>
         <div class="container">
@@ -36,7 +39,12 @@ if (isset($_POST['audio'])){
             </header>
             <section>
                 <div id="cartes">
-                    Section
+                    <?php 
+                        for ($i=0; $i < $nbCarte ; $i++) { 
+                            echo "<img src=\"./Images/cartes-dos.jpg\" alt\"lorempixel\" class=\"carte\" id=\"$i\">";
+                                                   }
+
+                     ?>                   
                 </div>
             </section>
             <?php
