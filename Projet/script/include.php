@@ -44,3 +44,26 @@ function formLogin() {
     </aside>
     <?php
 }
+function PrintRules() {
+    ?>
+        <div class="jumbotron">
+            <h2>
+                Bienvenue sur SoundMemory
+            </h2>
+            <p>
+                SoundMemory est un jeu reprenant le concept du memory, mais avec du son.
+            </p>
+            <h3>
+                Règles :
+            </h3>       
+            <p>
+                Vous disposez de 6 cartes face retournée et de 10 essais. Lorsque vous cliquez sur une carte, vous entendez un son.
+                Une fois que le son est terminé, vous pouvez cliquer sur une seconde carte.
+                Si la musique est identique, les cartes se retournent et ne sont plus cliquable.
+                Si les musiques sont différentes, le joueur perd un essai.
+                Si le nombre d'essai descend en dessous de 0, le joueur a perdu.
+                Le joueur Gagne dès que toutes les paires de cartes sont retournées.
+            </p>
+        </div>
+    <?php
+}

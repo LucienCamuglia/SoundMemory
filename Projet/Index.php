@@ -28,7 +28,7 @@ if (isset($_POST['audio'])){
         <script src="./JS/jquery.js" ></script>
     </head>
     <body>
-        <div class="page">
+        <div class="container">
             <header class="navbar navbar-fixed-top">
                 <div class="container">
                     <h1>SoundMemory</h1> 
@@ -46,6 +46,11 @@ if (isset($_POST['audio'])){
                 formLogin();
             }
             ?>
+            <section>
+                <?php
+                    PrintRules();
+                ?>
+            </section>
             <footer class="navbar-fixed-bottom">
                 © Camuglia Lucien & Perez Ivan - M152 - 2014    
             </footer>
