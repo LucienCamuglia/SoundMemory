@@ -1,10 +1,15 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/*
+Module : M152 
+Project : 18 - SoundMemory
+Page    : include.php
+InfoPage: Page contenant toutes les fonctions PHP relative au musique.
+Autor   : Camuglia Lucien, Perez Ivan
+Date    : 21.11.2014
+Version : 1.0 
+
+*/
 
 
 /**

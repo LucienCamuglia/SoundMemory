@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- 
-Module : M152
+Module : M152 
 Project : 18 - SoundMemory
 Page    : index.php
 InfoPage: Page d'accueil du site, page du jeux.
@@ -9,8 +9,11 @@ Date    : 21.11.2014
 Version : 1.0 
 -->
 <?php
+$nbCarte = 6;
+
 include './script/functions.php';
 include './script/include.php';
+
 if (isset($_POST['login'])) {
     connexion();
 }
@@ -18,7 +21,7 @@ if (isset($_POST['audio'])){
     upload();
 }
 
-$nbCarte = 6;
+
 
 ?>
 <html>
@@ -28,7 +31,7 @@ $nbCarte = 6;
         <link rel="stylesheet" href="./CSS/bootstrap.min.css" type="text/css"/>
         <link rel="stylesheet" href="./CSS/style.css" type="text/css"/>
         <script src="./JS/jquery.js" ></script>
-        <script src="./JS/script.js" ></script>
+        <script src="./JS/script.js" ></script>        
     </head>
     <body>
         <div class="container">
@@ -42,7 +45,8 @@ $nbCarte = 6;
                     <?php 
                         for ($i=0; $i < $nbCarte ; $i++) { 
                             echo "<img src=\"./Images/cartes-dos.jpg\" alt\"lorempixel\" class=\"carte\" id=\"$i\">";
-                                                   }
+                            echo "<audio id=a".$i."> <source src=Musique" .$i. ".mp3 type=\"audio/\"/></audio>";
+                         }
 
                      ?>                   
                 </div>

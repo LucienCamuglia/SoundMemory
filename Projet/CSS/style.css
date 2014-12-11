@@ -43,3 +43,7 @@ aside{
     width: 100px;
     height: 150px;
 }
+
+audio{
+    display : none;
+}

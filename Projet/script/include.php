@@ -1,5 +1,16 @@
 <?php
 
+/*
+Module : M152 
+Project : 18 - SoundMemory
+Page    : include.php
+InfoPage: Page contenant touts les include php.
+Autor   : Camuglia Lucien, Perez Ivan
+Date    : 21.11.2014
+Version : 1.0 
+
+*/
+
 function formUpload() {
     ?>
     <aside>
