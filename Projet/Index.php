@@ -45,7 +45,7 @@ if (isset($_POST['audio'])){
                     <?php 
                         for ($i=0; $i < $nbCarte ; $i++) { 
                             echo "<img src=\"./Images/cartes-dos.jpg\" alt\"lorempixel\" class=\"carte\" id=\"$i\">";
-                            echo "<audio id=a".$i."> <source src=Musique" .$i. ".mp3 type=\"audio/\"/></audio>";
+                            echo "<audio id=a".$i."> <source src=\" ./audio/Anti-douleur.wav\" type=\"audio/wav\"/></audio>";
                          }
 
                      ?>                   
