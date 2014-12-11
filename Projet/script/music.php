@@ -11,11 +11,41 @@ Version : 1.0
 
 */
 
+define('HOST', "localhost");
+define('DB_NAME', "soundmemory");
+define('USER', 'root');
+define('PASSWORD', '');
+
+// DB Connection
+    /**
+     * Starts a Database connection
+     * @staticvar null $pdo
+     * @return $pdo the database
+     */
+function DBConnect()
+    {           
+        try
+        {
+            static $pdo = null;
+            if ($pdo === null)
+            {
+                $pdo = new PDO('mysql:host='.HOST.';dbname='.DB_NAME, USER, PASSWORD);
+                $pdo->exec('set character set utf8;');
+            }
+	}	
+        catch (Exception $e)
+	{
+            die('Erreur : '.$e->getMessage());
+	}
+	return $pdo;
+    }
 
 /**
      * Read all Medias from "Medias"
      * @return array of assoc arrays - [0] => Array([Name] => [Value]), etc
-     */    
+     */ 
+
+require_once 'functions.php';
 function ReadMedias()
     {
         $pdo = DBConnect();
@@ -32,7 +62,26 @@ function ReadMedias()
             return FALSE;
         }
     }
-    
+/**
+     * Read all Musics from "Medias"
+     * @return array of assoc arrays - [0] => Array([Name] => [Value]), etc
+     */    
+function ReadMusics()
+    {
+        $pdo = DBConnect();
+        $query = 'SELECT * FROM Medias WHERE MediaType = "Sound"';
+        $st = $pdo->prepare($query);
+        $st->execute();
+        $result = $st->fetchAll(PDO::FETCH_ASSOC);
+        if (!empty($result))
+        {
+            return $result;
+        }
+        else
+        {
+            return FALSE;
+        }
+    }    
 /**
      * Reads a Media from "Medias"
      * @param integer $Id - The id of the media you want
