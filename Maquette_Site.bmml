@@ -1,0 +1,73 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="672" measuredH="574" mockupW="618" mockupH="542">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="54" y="32" w="618" h="542" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>SoundMemory%0Ahttp%3A//127.0.0.1/M152/index.php</text>
+        <value>0</value>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Title" x="234" y="119" w="-1" h="-1" measuredW="259" measuredH="43" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>SoundMemory</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Canvas" x="163" y="162" w="401" h="279" measuredW="100" measuredH="70" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Image" x="219" y="177" w="79" h="111" measuredW="297" measuredH="417" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./Projet/Images/cartes-dos.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Image" x="324" y="177" w="79" h="111" measuredW="297" measuredH="417" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./Projet/Images/cartes-dos.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Image" x="429" y="177" w="79" h="111" measuredW="297" measuredH="417" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./Projet/Images/cartes-dos.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Image" x="219" y="297" w="79" h="111" measuredW="297" measuredH="417" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./Projet/Images/cartes-dos.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Image" x="324" y="297" w="79" h="111" measuredW="297" measuredH="417" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./Projet/Images/cartes-dos.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Image" x="429" y="297" w="79" h="111" measuredW="297" measuredH="417" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./Projet/Images/cartes-dos.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Button" x="403" y="453" w="-1" h="-1" measuredW="166" measuredH="27" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Administrator%20Login%20Only</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::TextInput" x="163" y="453" w="104" h="-1" measuredW="76" measuredH="27" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Username</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::TextInput" x="282" y="453" w="95" h="-1" measuredW="70" measuredH="27" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Password</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::TextArea" x="163" y="495" w="401" h="47" measuredW="200" measuredH="140" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Explications%20du%20jeu....</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

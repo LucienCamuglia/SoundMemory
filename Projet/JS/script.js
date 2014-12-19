@@ -7,56 +7,56 @@
  Date    : 21.11.2014
  Version : 1.0 
  */
-
+//défini le nombre d'essais
 var nbEssais = 10;
 
-var audio;
 $(function() {
+    var maMusique;
     $(".carte").click(function() {
+        //affiche les essays retant a l'utilisateur.
+        AfficheEssais();
         //predn l'ID de la carte.
         var MusicId = this.id;
-        //prend le lien de la musique en relation avec la carte
-        var Lienaudio = $("#a" + MusicId).children()[0].getAttribute("src");
+        
         if (nbEssais > 0)
         {
             //crée l'objet audio
-            audio = new Audio(Lienaudio);
-
-            console.log(audio.readyState);
-
-            audio.addEventListener("canplaythrough", function() {
+            maMusique = document.getElementById('a' + MusicId);            
+            
+            maMusique.addEventListener("canplaythrough", function() {
                 console.log("canplaythrough");
-                audio.play();
+                maMusique.play();
             });
-            audio.load();
-            //démarre l'audio
-
-            audio.play();
+            maMusique.load();
 
             //timer
-            /*  setInterval(function() {
-             console.log(audio.currentTime);
-             //test le temps de l'audio
-             if (audio.currentTime >= 29) {
-             //met l'audio en pause
-             audio.pause();
-             //remet le temp a 0
-             audio.currentTime = 0;
-             }
-             }, 1000);
-             });*/
+            setInterval(function() {
+                //test le temps de l'audio
+                if (maMusique.currentTime >= 29) {
+                    //met l'audio en pause
+                    maMusique.pause();
+                    //remet le temp a 0
+                    maMusique.currentTime = 0;
+                }
+            }, 1000);
+
+            //décrémente le nombre d'essais
             nbEssais--;
+            //affiche le nombre d'essais restant.
             AfficheEssais();
 
-        }else{
-         alert("vous avez Perdu !");   
-        };
+        } else {
+            //indique a l'utilisateur qu'il à perdu.
+            alert("vous avez Perdu !");
+        }
+        ;
     });
 
 
 
 })
 
+//affiche le nombre d'essais
 function AfficheEssais() {
     $(".essais").text(nbEssais + " essais");
 }

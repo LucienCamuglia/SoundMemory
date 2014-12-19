@@ -27,7 +27,7 @@ if (isset($_POST['audio'])){
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>SoundMemory</title>
         <link rel="stylesheet" href="./CSS/bootstrap.min.css" type="text/css"/>
         <link rel="stylesheet" href="./CSS/style.css" type="text/css"/>
         <script src="./JS/jquery.js" ></script>
@@ -41,14 +41,16 @@ if (isset($_POST['audio'])){
                 </div>
             </header>
             <section>
-                <div id="cartes">
-                    <?php 
-                        for ($i=0; $i < $nbCarte ; $i++) { 
-                            echo "<img src=\"./Images/cartes-dos.jpg\" alt=\"Carte\" class=\"carte\" id=\"$i\">";
-                            echo "<audio id=a".$i."> <source src=\" ./audio/Anti-douleur.wav\" type=\"audio/wav\"/></audio>";
-                         }
-
-                     ?>      
+                <div id="cartes">                  
+                    <script>
+                        var div = document.getElementById("cartes");
+                        for(var i=0; i<6;i++){
+                            div.innerHTML += "<img src=\"./Images/cartes-dos.jpg\" alt=\"Carte\" class=\"carte\" id=\""+i+"\">" +
+                                             "<audio id=a"+i+" preload=\"auto\">"+
+                                             "<source src=\"./audio/Anti-douleur.wav\" type=\"audio/wav\"/>"+
+                                             "</audio>";
+                        }
+                    </script>
                      <h3 class="essais"></h3>             
                                       
                 </div>
