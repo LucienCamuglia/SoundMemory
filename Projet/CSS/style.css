@@ -44,6 +44,8 @@ aside{
     height: 150px;
 }
 
+#cartes h3{
+    color: #FFF;
 audio{
     display : none;
 }

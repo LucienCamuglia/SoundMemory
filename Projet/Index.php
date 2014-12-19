@@ -44,11 +44,13 @@ if (isset($_POST['audio'])){
                 <div id="cartes">
                     <?php 
                         for ($i=0; $i < $nbCarte ; $i++) { 
-                            echo "<img src=\"./Images/cartes-dos.jpg\" alt\"lorempixel\" class=\"carte\" id=\"$i\">";
+                            echo "<img src=\"./Images/cartes-dos.jpg\" alt=\"Carte\" class=\"carte\" id=\"$i\">";
                             echo "<audio id=a".$i."> <source src=\" ./audio/Anti-douleur.wav\" type=\"audio/wav\"/></audio>";
                          }
 
-                     ?>                   
+                     ?>      
+                     <h3 class="essais"></h3>             
+                                      
                 </div>
             </section>
             <?php

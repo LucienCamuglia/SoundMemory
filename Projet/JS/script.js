@@ -1,3 +1,5 @@
+var nbEssais = 10 ;
+
 /*
  Module : M152 
  Project : 18 - SoundMemory
@@ -13,9 +15,11 @@ var audio ;
 $(function() {
     $(".carte").click(function() {
     	//predn l'ID de la carte.
-        var MusicId = this.id;
+ var MusicId = this.id;
         //prend le lien de la musique en relation avec la carte
         var Lienaudio = $("#a" + MusicId).children()[0].getAttribute("src");
+	if (nbEssais > 0)
+	{
         //crée l'objet audio
         audio = new Audio(Lienaudio);
         
@@ -38,9 +42,14 @@ audio.play();
                 audio.currentTime = 0;
             }
         }, 1000);*/
+});
 
     });
 
 
 
 })
+
+function AfficheEssais(){
+	$(".essais").text(nbEssais + " essais");
+}
