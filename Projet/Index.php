@@ -17,9 +17,7 @@ include './script/include.php';
 if (isset($_POST['login'])) {
     connexion();
 }
-if (isset($_POST['audio'])){
-    upload();
-}
+
 
 
 

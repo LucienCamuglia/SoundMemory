@@ -19,7 +19,7 @@ function connexion() {
             if (($_POST['username'] == 'Admin') & ($_POST['password'] == 'Super2008')) {
                 session_start();
                 $_SESSION['login'] = true;
-                // header('location: ../index.php');
+                 header('location: ./admin.php');
             } else {
                 echo "wrong username or password";
                    }           
@@ -75,8 +75,4 @@ function BindMusicsToCards($nbCarte) {
             $i++;
     }
     return $Cards_Musics;
-}
-
-function upload() {
-    
 }

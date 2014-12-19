@@ -121,7 +121,7 @@ function UpdateMedia($id, $MediaType, $Name, $Path) {
     $st = $pdo->prepare($query);
     $st->execute(array(
         'id' => $id,
-        'MediaPath' => $MediaPath,
+        'MediaType' => $MediaType,
         'Name' => $Name,
         'Path' => $Path));
     $id = $pdo->LastInsertID();

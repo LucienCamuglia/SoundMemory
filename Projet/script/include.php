@@ -14,7 +14,7 @@ Version : 1.0
 function formUpload() {
     ?>
     <aside>
-        <form class="form-inline" method="post" action="index.php">
+        <form class="form-inline" method="post" action="add.php">
             <div class="form-group">
                 <div class="input-group">
                     <span class="glyphicon glyphicon-cloud-upload"> Upload une musique</span>

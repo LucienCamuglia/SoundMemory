@@ -21,22 +21,24 @@ $(function() {
         if (nbEssais > 0)
         {
             //crée l'objet audio
-            maMusique = document.getElementById('a' + MusicId);            
+            maMusique = document.getElementById('a' + MusicId);  
             
-            maMusique.addEventListener("canplaythrough", function() {
-                console.log("canplaythrough");
-                maMusique.play();
-            });
+            //charge la musique
             maMusique.load();
+            
+            //play la musique
+            maMusique.play();        
 
             //timer
             setInterval(function() {
                 //test le temps de l'audio
                 if (maMusique.currentTime >= 29) {
-                    //met l'audio en pause
-                    maMusique.pause();
+                    
                     //remet le temp a 0
                     maMusique.currentTime = 0;
+                    
+                    //met l'audio en pause
+                    maMusique.pause();
                 }
             }, 1000);
 

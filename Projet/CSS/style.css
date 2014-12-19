@@ -50,3 +50,21 @@ aside{
 audio{
     display : none;
 }
+
+#MediaSection{
+    margin:auto;
+    margin-top: 25px;
+}
+
+table tbody tr td, table thead tr th {
+    padding-left : 20px;
+}
+table tbody tr td a {
+    margin :auto;
+}
+section a{
+    margin :auto;
+}
+aside{
+    margin-top: 5px
+}
