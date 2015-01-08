@@ -20,6 +20,8 @@ if (isset($_REQUEST['AddMusic'])) {
     copy($cheminTmpMusique, $cheminFinal);
     
     AddMedia("Sound", $pathinfo['basename'], $cheminFinal);
+	
+	header('location : ./admin.php');
 };
 ?>
 

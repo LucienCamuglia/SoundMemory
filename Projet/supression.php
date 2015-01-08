@@ -4,13 +4,17 @@ if (isset($_GET['id'])) {
     if (!empty($_GET['id'])) {
         $id = $_GET['id'];
     }
+}else{
+header('location : ./admin.php');
 }
 
 if(isset($_POST['Supp'])){
     DeleteMedia($_POST['id']);
     header('location : ./admin.php');
 }
-
+if (!isset($id)){
+header('location : ./admin.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +42,10 @@ and open the template in the editor.
             </header>
             <section id='MediaSection'>
                 <?php
+				
                 $media = ReadMediaById($id);
+				
+				
                 ?>
                 <form class="form-inline" method="post" action="supression.php">
                     <h1>Suprimer la musique</h1>
