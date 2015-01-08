@@ -3,15 +3,19 @@ include './script/music.php';
 include './script/include.php';
 
 
-if (isset($_POST['submit'])) {
+
+if (isset($_REQUEST['AddMusic'])) {
+   
 
     // Récupère le chemin de l'avatar.
     $cheminTmpMusique = $_FILES['musique']['tmp_name'];   //L'adresse vers le fichier uploadé dans le répertoire temporaire.
 
-    $pathinfo = pathinfo($FILES['musique']['name']);
+    $pathinfo = pathinfo($_FILES['musique']['name']);
 
 
     $cheminFinal = "./audio/" . $pathinfo['basename'] . "." . $pathinfo['extension'];
+
+   
     // Copie et renomme l'avavar.
     copy($cheminTmpMusique, $cheminFinal);
     
@@ -39,11 +43,23 @@ and open the template in the editor.
             <header class="navbar navbar-fixed-top">
                 <div class="container">
                     <h1>SoundMemory</h1> 
-                    <h2>Modification d'un media</h2>
+                    <h2>Ajout d'un media</h2>
                 </div>
             </header>
-            <?php
-            formUpload();
-            ?>
+            
+            <aside>
+                 <form class="form-inline" method="post" action="add.php"  enctype="multipart/form-data">
+                 <div class="form-group">
+                 <div class="input-group">
+                    <span class="glyphicon glyphicon-cloud-upload"> Upload une musique</span>
+                    <input type="file" name="musique" accept="audio/*">                    
+                 </div>
+                 <div class="input-group">                            
+                    <span class="glyphicon glyphicon-download-alt"></span>
+                    <input type="submit" name="AddMusic" value="Upload la musique"/>
+                 </div>                
+                 </div>
+                 </form>
+            </aside>
     </body>
 </html>

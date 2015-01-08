@@ -135,7 +135,7 @@ function UpdateMedia($id, $MediaType, $Name, $Path) {
 function DeleteMedia($id) {
     $pdo = DBConnect();
     $query = 'DELETE FROM Medias
-            WHERE idPMedia=:id';
+            WHERE idMedia=:id';
     $st = $pdo->prepare($query);
     $st->execute(array(
         'id' => $id));

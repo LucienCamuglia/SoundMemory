@@ -6,8 +6,9 @@ if (isset($_GET['id'])) {
     }
 }
 
-if(isset($_POST['submit'])){
+if(isset($_POST['Supp'])){
     DeleteMedia($_POST['id']);
+    header('location : ./admin.php');
 }
 
 ?>
@@ -39,7 +40,7 @@ and open the template in the editor.
                 <?php
                 $media = ReadMediaById($id);
                 ?>
-                <form class="form-inline" method="post" action="modification.php">
+                <form class="form-inline" method="post" action="supression.php">
                     <h1>Suprimer la musique</h1>
                     <div class="form-group">
                         <div class="input-group">
@@ -67,7 +68,7 @@ and open the template in the editor.
 
                         <div class="input-group">                            
                             <span class="glyphicon glyphicon-log-in"></span>
-                            <input type="submit" name="Modification" value="Suprimer le Media"/>
+                            <input type="submit" name="Supp" value="Suprimer le Media"/>
                         </div>
                     </div>
                 </form>
